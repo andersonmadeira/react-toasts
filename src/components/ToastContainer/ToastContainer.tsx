@@ -8,7 +8,7 @@ import './ToastContainer.scss'
 
 const ToastContainer: React.FC<ToastContainerProps> = ({ toasts }) => {
   return toasts.length > 0 ? (
-    <ul className="toast_container">
+    <ul data-testid="toast_container" className="toast_container">
       {toasts.map((t, i) => (
         <Toast key={i} text={t.text} />
       ))}{' '}
