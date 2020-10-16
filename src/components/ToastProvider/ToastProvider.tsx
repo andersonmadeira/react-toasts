@@ -1,10 +1,13 @@
-import React, { useCallback, useState } from 'react'
+import React, { createContext, useCallback, useContext, useState } from 'react'
 
-import ToastContext from '../../ToastContext'
 import ToastContainer from '../ToastContainer/ToastContainer'
 import { Toast } from '../Toast/Toast.types'
 
 import { ToastProviderProps } from './ToastProvider.types'
+
+export const ToastContext = createContext({})
+
+export const useToast = () => useContext(ToastContext)
 
 const ToastProvider: React.FC<ToastProviderProps> = ({
   children,
@@ -21,7 +24,7 @@ const ToastProvider: React.FC<ToastProviderProps> = ({
   }, [])
 
   return (
-    <ToastContext.Provider value={{ addToast, removeToast }}>
+    <ToastContext.Provider value={{ toasts, addToast, removeToast }}>
       <ToastContainer toasts={toasts} />
       {children}
     </ToastContext.Provider>

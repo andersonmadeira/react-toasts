@@ -1,6 +1,1 @@
-import { useContext } from 'react'
-import ToastContext from './ToastContext'
-
-export { ToastProvider } from './components'
-
-export const useToast = () => useContext(ToastContext)
+export { default as ToastProvider, useToast } from './components/ToastProvider/ToastProvider'
