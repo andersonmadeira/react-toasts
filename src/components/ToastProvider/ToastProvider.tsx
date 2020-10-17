@@ -3,15 +3,16 @@ import React, { createContext, useCallback, useContext, useState } from 'react'
 import ToastContainer from '../ToastContainer/ToastContainer'
 import { Toast } from '../Toast/Toast.types'
 
-import { ToastProviderProps } from './ToastProvider.types'
+import { ToastContextType, ToastProviderProps } from './ToastProvider.types'
+import { ToastContainerProps } from '../ToastContainer/ToastContainer.types'
 
 export const ToastContext = createContext({})
 
-export const useToast = () => useContext(ToastContext)
+export const useToast = () => useContext<ToastContextType>(ToastContext)
 
 const ToastProvider: React.FC<ToastProviderProps> = ({
   children,
-  position,
+  position = 'top',
 }) => {
   const [toasts, setToasts] = useState<Toast[]>([])
 

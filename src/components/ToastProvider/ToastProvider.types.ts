@@ -2,7 +2,7 @@ import { Toast } from "../Toast/Toast.types"
 
 export interface ToastProviderProps {
   children: React.ReactNode
-  position: 'top' | 'bottom'
+  position?: 'top' | 'bottom'
 }
 
 export type AddToastCallback = (text: string) => void
