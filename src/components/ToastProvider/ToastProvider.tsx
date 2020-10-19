@@ -4,7 +4,6 @@ import ToastContainer from '../ToastContainer/ToastContainer'
 import { Toast } from '../Toast/Toast.types'
 
 import { ToastContextType, ToastProviderProps } from './ToastProvider.types'
-import { ToastContainerProps } from '../ToastContainer/ToastContainer.types'
 
 export const ToastContext = createContext({})
 
