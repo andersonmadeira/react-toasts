@@ -1,0 +1,36 @@
+.amrt__tc * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.amrt__tc {
+  position: relative;
+  list-style-type: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 0;
+}
+
+.amrt__tc__t {
+  color: white;
+  background-color: red;
+  width: 230px;
+  padding: 10px 20px;
+  box-shadow: rgba(15, 17, 21, 0.35) 0px 6px 9px 0px;
+  background-color: #444;
+  border-radius: 4px;
+  border-top: 3px solid #333;
+  margin: 14px 10px;
+  animation: slidein 0.2s;
+}
+
+@keyframes slidein {
+  from {
+    transform: translate(100px, 0px);
+  }
+  to {
+    transform: translate(0px, 0px);
+  }
+}

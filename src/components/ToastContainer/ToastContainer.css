@@ -1,0 +1,12 @@
+.amrt__tc * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.amrt__tc {
+  list-style-type: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
